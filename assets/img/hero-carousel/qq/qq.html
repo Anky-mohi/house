@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Telecom Solutions</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        .hero-gradient {
+            background: linear-gradient(120deg, #0f172a 0%, #1e3a8a 100%);
+        }
+        .card-gradient {
+            background: linear-gradient(145deg, rgba(255,255,255,1) 0%, rgba(240,240,240,1) 100%);
+        }
+        .custom-shape {
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+        }
+        .floating {
+            animation: float 6s ease-in-out infinite;
+        }
+        @keyframes float {
+            0% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+            100% { transform: translateY(0px) rotate(0deg); }
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        .text-gradient {
+            background: linear-gradient(90deg, #3b82f6 0%, #1e3a8a 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-md shadow-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="flex items-center space-x-4">
+                <div class="w-12 h-12 bg-blue-600 rounded-lg flex items-center justify-center">
+                    <span class="text-white font-bold text-xl">TS</span>
+                </div>
+                <span class="text-xl font-bold text-gray-800">TechSolutions</span>
+            </div>
+            <div class="hidden md:flex space-x-8">
+                <a href="#about" class="text-gray-600 hover:text-blue-600 transition-colors">About</a>
+                <a href="#services" class="text-gray-600 hover:text-blue-600 transition-colors">Services</a>
+                <a href="#solutions" class="text-gray-600 hover:text-blue-600 transition-colors">Solutions</a>
+                <a href="#contact" class="bg-blue-600 text-white px-6 py-2 rounded-full hover:bg-blue-700 transition-colors">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-gradient custom-shape min-h-screen pt-24 relative overflow-hidden">
+        <div class="absolute inset-0">
+            <div class="floating absolute top-20 left-20 w-40 h-40 bg-blue-400/20 rounded-full blur-3xl"></div>
+            <div class="floating absolute bottom-40 right-20 w-60 h-60 bg-blue-500/20 rounded-full blur-3xl" style="animation-delay: -2s"></div>
+        </div>
+        <div class="container mx-auto px-6 py-20 relative">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div class="text-white" data-aos="fade-right">
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight mb-6">
+                        Connecting Your Business to the Future
+                    </h1>
+                    <p class="text-xl text-blue-100 mb-8">
+                        Premium telecom solutions tailored for modern enterprises. Experience reliability, innovation, and excellence.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#contact" class="bg-white text-blue-600 px-8 py-4 rounded-xl font-bold hover:bg-blue-50 transition-colors">Get Started</a>
+                        <a href="#services" class="border-2 border-white text-white px-8 py-4 rounded-xl font-bold hover:bg-white/10 transition-colors">Our Services</a>
+                    </div>
+                </div>
+                <div class="relative" data-aos="fade-left">
+                    <div class="w-full h-96 bg-white/10 backdrop-blur-lg rounded-2xl p-8 floating">
+                        <img src="young-man-engineer-making-program-analyses.jpg" alt="Network visualization" class="w-full h-full object-cover rounded-xl"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4" data-aos="fade-up">Our Premium Services</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto" data-aos="fade-up" data-aos-delay="100">
+                    Delivering cutting-edge telecom solutions that transform businesses.
+                </p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="card-gradient p-8 rounded-2xl card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <img src="https://via.placeholder.com/32" alt="Network icon" class="text-white"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Network Solutions</h3>
+                    <p class="text-gray-600">Enterprise-grade networking infrastructure designed for reliability and performance.</p>
+                </div>
+                <div class="card-gradient p-8 rounded-2xl card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <img src="https://via.placeholder.com/32" alt="Cable icon" class="text-white"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Cable Systems</h3>
+                    <p class="text-gray-600">High-performance cable solutions for seamless connectivity and data transmission.</p>
+                </div>
+                <div class="card-gradient p-8 rounded-2xl card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="bg-blue-600 w-16 h-16 rounded-xl flex items-center justify-center mb-6">
+                        <img src="https://via.placeholder.com/32" alt="Equipment icon" class="text-white"/>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Equipment Supply</h3>
+                    <p class="text-gray-600">Premium telecom equipment and tools from leading manufacturers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-24 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-12">
+                <div class="bg-gray-50 p-8 rounded-2xl" data-aos="fade-right">
+                    <h2 class="text-4xl font-bold mb-6">Get in Touch</h2>
+                    <p class="text-gray-600 mb-8">Ready to transform your business with our premium telecom solutions? Contact us today.</p>
+                    <form class="space-y-6">
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">Name</label>
+                            <input type="text" class="w-full p-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your name"/>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">Email</label>
+                           
+                            <input type="email" class="w-full p-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your email"/>
+                        </div>
+                        <div>
+                            <label class="block text-gray-700 mb-2 font-semibold">Message</label>
+                            <textarea class="w-full p-4 border rounded-xl focus:ring-2 focus:ring-blue-500 focus:outline-none" placeholder="Your message" rows="4"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-blue-600 text-white font-bold py-4 rounded-xl hover:bg-blue-700 transition-colors">
+                            Send Message
+                        </button>
+                    </form>
+                </div>
+                <div class="flex flex-col justify-center" data-aos="fade-left">
+                    <h3 class="text-2xl font-bold mb-4">Contact Information</h3>
+                    <p class="text-gray-600 mb-6">We'd love to hear from you. Reach out to us using the following details:</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-center space-x-4">
+                            <span class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center">
+                                <i class="fas fa-phone-alt"></i>
+                            </span>
+                            <span class="text-gray-600">+1 (555) 123-4567</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center">
+                                <i class="fas fa-envelope"></i>
+                            </span>
+                            <span class="text-gray-600">contact@techsolutions.com</span>
+                        </li>
+                        <li class="flex items-center space-x-4">
+                            <span class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </span>
+                            <span class="text-gray-600">123 Tech Lane, Silicon Valley, CA</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-400 py-12">
+        <div class="container mx-auto px-6 text-center">
+            <div class="mb-6">
+                <h3 class="text-white text-2xl font-bold">TechSolutions</h3>
+                <p class="text-gray-500 mt-4">Empowering businesses with innovative telecom solutions.</p>
+            </div>
+            <ul class="flex justify-center space-x-8 mb-6">
+                <li><a href="#" class="text-gray-400 hover:text-white">Privacy Policy</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Terms of Service</a></li>
+                <li><a href="#" class="text-gray-400 hover:text-white">Support</a></li>
+            </ul>
+            <p class="text-gray-500">&copy; 2025 TechSolutions. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: true,
+        });
+    </script>
+</body>
+</html>
