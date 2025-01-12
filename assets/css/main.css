@@ -20,9 +20,9 @@
 /* Global Colors - The following color variables are used throughout the website. Updating them here will change the color scheme of the entire website */
 :root { 
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
-  --default-color: #364d59; /* Default color used for the majority of the text content across the entire website */
+  --default-color: #bfa350; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #52565e; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #6fb4cf; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #bfa350; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -143,14 +143,18 @@ h6 {
 # Global Header
 --------------------------------------------------------------*/
 .header {
-  --background-color: rgba(255, 255, 255, 0);
-  --default-color: #ffffff;
-  --heading-color: #ffffff;
+  background: transparent;
   color: var(--default-color);
   background-color: var(--background-color);
- 
+  position: absolute;
   transition: all 0.5s;
   z-index: 997;
+  position: absolute; /* Makes the header overlap the hero section */
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: transparent; /* Transparent background to show the hero image */
+  z-index: 10; 
 }
 
 .header .logo img {
@@ -172,19 +176,50 @@ h6 {
   color: var(--color-primary);
 }
 
-.scrolled .header {
-  box-shadow: 0px 0 18px rgba(0, 0, 0, 0.1);
+@media (max-width: 768px) {
+ 
+
+  .navmenu.active {
+    display: flex; /* Show navigation menu when active */
+  }
+
+  .navmenu ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .navmenu ul li a {
+    font-size: 18px;
+    text-align: center;
+    padding: 10px;
+  }
+
+  .mobile-nav-toggle {
+    display: block; /* Show mobile toggle icon */
+  }
+
+  .header .logo img {
+     /* Adjust logo size for smaller screens */
+     padding-left: 40px;
+  }
+
+  .header .logo h1 {
+    font-size: 20px;
+  }
+
+  .header .logo span {
+    font-size: 20px;
+  }
 }
 
 /* Global Header on Scroll
 ------------------------------*/
-.scrolled .header {
-  --background-color: rgba(255, 255, 255, 0.95);
-  --heading-color: #3c3c3c;
-  --nav-color: #3c3c3c;
-  --nav-hover-color: #3c3c3c;
+@media (max-width: 1199px) {
+   .section {
+      scroll-margin-top: 76px;
+      padding-top: 10px;
+  }
 }
-
 /*--------------------------------------------------------------
 # Navigation Menu
 --------------------------------------------------------------*/
@@ -334,8 +369,7 @@ h6 {
   }
 
   .navmenu {
-    padding: 0;
-    z-index: 9997;
+    padding-right: 40px;
   }
 
   .navmenu ul {
@@ -722,6 +756,7 @@ section,
   section,
   .section {
     scroll-margin-top: 76px;
+    padding-top: 10px;
   }
 }
 
@@ -760,13 +795,19 @@ section,
 .section-title p {
   margin-bottom: 0;
 }
+@media (max-width: 768px) {
+  .col-lg-6.text-center {
+    padding-top: 15px; /* Reduce spacing for smaller screens */
+    margin-top: 15px;
+  }
+}
 
 /*--------------------------------------------------------------
 # Hero Section
 --------------------------------------------------------------*/
 .hero {
   width: 100%;
-  min-height: 100vh;
+  
   position: relative;
   padding: 0;
   display: flex;
@@ -813,6 +854,7 @@ section,
 @media (max-width: 768px) {
   .hero .info h2 {
     font-size: 36px;
+    padding-top: 30px;
   }
 }
 
