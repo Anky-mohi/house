@@ -1691,6 +1691,92 @@ video {
 }
 
 
+
+
+
+
+
+.contact.section {
+  padding: 60px 0;
+  background-color: #f9f9f9;
+}
+
+.section-title h2 {
+  font-size: 32px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.section-title p {
+  font-size: 16px;
+  color: #555;
+}
+
+.info-item {
+  background: #fff;
+  transition: all 0.3s ease;
+}
+
+.info-item:hover {
+  background: #f1f1f1;
+  transform: translateY(-5px);
+}
+
+.info-item .icon {
+  font-size: 36px;
+  color: #007bff;
+  margin-bottom: 10px;
+}
+
+.info-item h3 {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.info-item p {
+  font-size: 14px;
+  color: #555;
+}
+
+.php-email-form {
+  background: #fff;
+}
+
+.php-email-form .form-control {
+  border: 1px solid #ddd;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 4px;
+}
+
+.php-email-form .btn {
+  background: #007bff;
+  color: #fff;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.php-email-form .btn:hover {
+  background: #0056b3;
+}
+
+.php-email-form .btn:focus {
+  outline: none;
+}
+
+.php-email-form textarea {
+  resize: none;
+}
+
+iframe {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
 </style>
 </head>
 
@@ -2223,95 +2309,85 @@ video {
 
 
 
+
+
+
+
 <!-- Contact Section -->
 <section id="contact" class="contact section">
-
   <div class="container" data-aos="fade-up" data-aos-delay="100">
-
-    <div class="row gy-4">
-
-      <div class="col-lg-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="200">
-          <i class="bi bi-geo-alt"></i>
-          <span class="para">
-            <h3>Address</h3>
-            <p>A108 Adam Street, New York, NY 535022</p>
-          </span>
-          
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="300">
-          <i class="bi bi-telephone"></i>
-          <span class="para">
-            <h3>Call Us</h3>
-            <p>+1 5589 55488 55</p>
-          </span>
-         
-        </div>
-      </div><!-- End Info Item -->
-
-      <div class="col-lg-3 col-md-6">
-        <div class="info-item d-flex flex-column justify-content-center align-items-center" data-aos="fade-up" data-aos-delay="400">
-          <i class="bi bi-envelope"></i>
-          <span class="para">
-            <h3>Email Us</h3>
-            <p>info@example.com</p>
-          </span>
-         
-        </div>
-      </div><!-- End Info Item -->
-
+    <div class="section-title text-center">
+      <h2>Contact Us</h2>
+      <p>We would love to hear from you! Reach out to us through any of the options below.</p>
     </div>
 
-    <div class="row gy-4 mt-1">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="300">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus" frameborder="0" style="border:0; width: 100%; height: 400px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div><!-- End Google Maps -->
+    <div class="row gy-5 align-items-center">
+      <!-- Address -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-item shadow text-center py-4 px-3 rounded" data-aos="fade-up" data-aos-delay="200">
+          <i class="bi bi-geo-alt icon"></i>
+          <h3>Address</h3>
+          <p>A108 Adam Street, New York, NY 535022</p>
+        </div>
+      </div>
 
-      <div class="col-lg-6">
-        <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="400">
+      <!-- Call Us -->
+      <div class="col-lg-4 col-md-6">
+        <div class="info-item shadow text-center py-4 px-3 rounded" data-aos="fade-up" data-aos-delay="300">
+          <i class="bi bi-telephone icon"></i>
+          <h3>Call Us</h3>
+          <p>+1 5589 55488 55</p>
+        </div>
+      </div>
+
+      <!-- Email Us -->
+      <div class="col-lg-4 col-md-12">
+        <div class="info-item shadow text-center py-4 px-3 rounded" data-aos="fade-up" data-aos-delay="400">
+          <i class="bi bi-envelope icon"></i>
+          <h3>Email Us</h3>
+          <p>info@example.com</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="row gy-4 mt-5">
+      <!-- Google Maps -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="500">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d48389.78314118045!2d-74.006138!3d40.710059!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c25a22a3bda30d%3A0xb89d1fe6bc499443!2sDowntown%20Conference%20Center!5e0!3m2!1sen!2sus!4v1676961268712!5m2!1sen!2sus"
+          frameborder="0"
+          style="border:0; width: 100%; height: 400px; border-radius: 8px;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+      <!-- Contact Form -->
+      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="600">
+        <form action="forms/contact.php" method="post" class="php-email-form shadow p-4 rounded">
           <div class="row gy-4">
-
             <div class="col-md-6">
               <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
             </div>
-
-            <div class="col-md-6 ">
+            <div class="col-md-6">
               <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
             </div>
-
             <div class="col-md-12">
               <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
             </div>
-
             <div class="col-md-12">
               <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
             </div>
-
             <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
+              <button type="submit" class="btn btn-primary">Send Message</button>
             </div>
-
           </div>
         </form>
-      </div><!-- End Contact Form -->
-
+      </div>
     </div>
-
   </div>
-
-</section><!-- /Contact Section -->
-
-
-
-
-
+</section>
 
   <!-- Payment Modal -->
   <div id="paymentModal" class="modal">
