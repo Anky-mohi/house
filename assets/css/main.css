@@ -251,31 +251,7 @@ h6 {
   }
 
   
-  .navmenu a, .navmenu a:focus {
-    color: var(--nav-color);
-    /* background-color: white; */
-    color: black !important;
-    padding: 0px 0px;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 16px;
-    padding: 10px 20px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
-    font-size: 14px;
-    /* padding: 0 2px; */
-    font-family: var(--nav-font);
-    font-weight: 500;
-    display: flex
-;
-    align-items: center;
-    justify-content: space-between;
-    white-space: nowrap;
-    transition: 0.3s;
-    position: relative;
-    text-transform: uppercase;
-}
-}
+ 
   .navmenu a i,
   .navmenu a:focus i {
     font-size: 12px;
