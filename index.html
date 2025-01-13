@@ -16,6 +16,7 @@
   <link href="https://fonts.googleapis.com" rel="preconnect">
   <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -252,7 +253,7 @@
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   color: #fff;
-  margin-bottom: 50px;
+ 
   text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
 }
 
@@ -413,7 +414,7 @@ ul li {
   font-size: 2.5rem;
   font-family: 'Poppins', sans-serif;
   color: var(--dark);
-  margin-bottom: 50px;
+ 
 }
 
 /* Activities Grid */
@@ -941,367 +942,1101 @@ ul li {
   font-weight: bold;
 }
 
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end; /* Align content to the bottom */
+    padding: 0 2rem; /* Add padding for spacing */
+}
 
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1; /* Ensure video is behind the text */
+}
+
+/* Hero Text */
+.hero-text {
+    position: relative;
+    z-index: 2; /* Ensure text is above the video */
+    color: white;
+    text-align: left;
+    margin-bottom: 2rem; /* Adjust bottom spacing */    
+    margin-right: 1000px;
+}
+
+.hero-text h1,
+.hero-text h2,
+.hero-text h3 {
+    margin: 0;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.hero-text h1 {
+    font-size: 1.5rem; /* Adjust as needed */
+}
+
+.hero-text h2 {
+    font-size: 1.5rem; /* Adjust as needed */
+    margin-left: -100px;
+}
+
+.hero-text h3 {
+    font-size: 1.5rem; /* Adjust as needed */
+    color: #af9240; /* Highlight color */
+}
+
+@media (max-width: 768px) {
+    .hero-text {
+        text-align: center; /* Center align for smaller devices */
+        margin-bottom: 4rem; /* Increase spacing */
+    }
+
+    .hero-text h1 {
+        font-size: 2rem; /* Scale down font size */
+    }
+
+    .hero-text h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 480px) {
+  .hero-text {
+        text-align: center; /* Center align for smaller devices */
+        /* Increase spacing */
+    }
+    .hero-text h1 {
+        font-size: 1.8rem; /* Smaller font size for extra small devices */
+    }
+
+    .hero-text h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero-text h3 {
+        font-size: 1rem;
+    }
+}
+
+.btn-quote {
+  background-color: white; /* White background */
+  color: black!important; /* Black text */
+  padding: 0px 0px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+
+/* Section1 */
+#rituaali-section {
+  padding: 50px 0;
+  background: #f9f9f9; /* Light gray background to contrast with white */
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.video-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+video {
+  border-radius: 10px;
+  max-height: 100%;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Adds depth to the video */
+}
+
+.content-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
+.content-container h2 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #bfa350; /* Darker color for visibility on light background */
+}
+
+.content-container p {
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555; /* Subtle gray for supporting text */
+}
+
+.small-image {
+  width: 500px;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.btn2 {
+  background-color: #bfa350; /* Dark background for contrast */
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+  
+  display: inline-block;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn2:hover {
+  background-color: white;
+  color: #333;
+  border-color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  
+
+  .content-container {
+    padding: 10px;
+  }
+
+  .small-image {
+    margin: 15px auto;
+    width: 300px;
+  }
+}
+
+
+
+
+/* Section3 */
+.promo-section {
+  position: relative;
+  background: url('assets/img/hero-carousel/RItuaali-dez23-Nina-71.webp') no-repeat center center / cover; /* Background image */
+  color: white;
+  padding: 80px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.promo-container {
+  max-width: 600px;
+  padding: 20px;
+  background: rgba(0, 0, 0, 0.6); /* Dark overlay for text readability */
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 1.5s ease-in-out;
+}
+
+.promo-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  line-height: 1.4;
+  color: #bfa350; /* Highlighted heading color */
+}
+
+.promo-content p {
+  font-size: 16px;
+  line-height: 1.8;
+  margin-bottom: 20px;
+}
+
+.btn-quote {
+  background-color: #bfa350; /* Eye-catching yellow button */
+  color: black;
+  padding: 12px 24px;
+  text-transform: uppercase;
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-quote:hover {
+  background-color: #ffe680;
+  color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .promo-section {
+    justify-content: center; /* Center content on smaller screens */
+    text-align: center;
+  }
+
+  .promo-container {
+    margin: 0 auto;
+  }
+
+  .promo-content h2 {
+    font-size: 24px;
+  }
+
+  .promo-content p {
+    font-size: 14px;
+  }
+
+  .btn-quote {
+    padding: 10px 20px;
+  }
+}
+
+/* Smooth Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+/* Section3 */
+.imagine-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9; /* Light background */
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  color: #333;
+
+}
+
+/* Card Styling */
+.card {
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 991px) {
+  .card-img {
+    height: 200px;
+  }
+
+  .card-body p {
+    font-size: 14px;
+  }
+}
+
+
+
+
+
+.feature-card, .feature-card1 {
+  position: relative;
+  background-size: cover; /* Ensures the image covers the card fully */
+  background-position: center; /* Keeps the image centered */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  height: 300px; /* Adjust card height as needed */
+  border-radius: 12px; /* Adds rounded corners */
+  overflow: hidden;
+  margin-bottom: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card1:hover, .feature-card:hover {
+  transform: scale(1.05); /* Adds a zoom effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds hover shadow */
+}
+
+.feature-card .content, .feature-card1 .content {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+  color: #fff;
+  text-align: center;
+  transition: background 0.3s ease;
+  
+}
+
+.feature-card .icon, .feature-card1 .icon {
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.feature-card .short-desc, .feature-card1 .short-desc {
+  font-size: 14px;
+  margin: 0;
+}
+
+.feature-card .card-hover-content, .feature-card1 .card-hover-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  display: none;
+  background: rgba(0, 0, 0, 0.8); /* Darker overlay for hover content */
+  color: #fff;
+  text-align: center;
+}
+
+.feature-card:hover .card-hover-content, .feature-card1:hover .card-hover-content {
+  display: block; /* Show hover content on hover */
+}
+
+.feature-card:hover .content, .feature-card1:hover .content {
+  display: none; /* Hide default content on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .feature-card, .feature-card1 {
+    height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+
+
+
+
+
+/* Accommodation Section 5 */
+.accommodation-section {
+  padding: 80px 20px;
+  background-color: #f9f9f9;
+}
+
+.section-title h2 {
+  text-align: center;
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.section-title p {
+  text-align: center;
+  font-size: 16px;
+  color: #555;
+ 
+}
+
+/* Card Styling */
+.accommodation-card {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #fff;
+}
+
+.accommodation-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.accommodation-card .content {
+  background: rgb(0 0 0 / 18%);
+  border-radius: 10px;
+  padding: 20px;
+  width: 100%;
+}
+
+.accommodation-card h3 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.accommodation-card ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.accommodation-card ul li {
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 20px;
+}
+
+.accommodation-card ul li::before {
+  content: "✔";
+  color: #fff;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .accommodation-card {
+    height: 300px;
+  }
+
+  .accommodation-card .content {
+    padding: 15px;
+  }
+
+  .accommodation-card h3 {
+    font-size: 20px;
+  }
+
+  .accommodation-card ul li {
+    font-size: 12px;
+  }
+}
+
+
+
+
+
+
+
+.program-section {
+  padding: 60px 0;
+  background-color: #ffffff; /* Clean white background */
+}
+
+.section-title h2 {
+  text-align: center;
+  color: #222;
+
+  font-size: 2.4rem;
+  font-weight: 600;
+}
+
+.program-card {
+  background: #f8f9fa; /* Light gray card background for contrast */
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  padding: 30px;
+  margin-bottom: 20px;
+}
+
+.program-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+}
+
+.program-card .card-header h3 {
+  color: #333;
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 500;
+}
+
+.program-card .card-body p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  font-size: 1rem;
+}
+
+.program-card ul {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 15px;
+}
+
+.program-card ul li {
+  margin-bottom: 8px;
+  color: #444;
+  font-size: 0.95rem;
+  position: relative;
+  padding-left: 25px;
+}
+
+.program-card ul li::before {
+  content: "•";
+  color: #ff6b6b;
+  font-size: 1.2rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.program-card .price {
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.program-card .quote-btn {
+  background: #bfa350;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.program-card .quote-btn:hover {
+  background: #0052a3;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .program-card {
+    margin-bottom: 30px;
+  }
+}
+
+
+/* Program Section Styling */
+.program-section {
+  padding: 80px 20px;
+  background-color: #f8f8f8;
+}
+
+.section-title h2 {
+  
+}
+
+/* Program section 6*/
+.program-card {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.program-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+
+.card-header {
+  background: #bfa350;
+  color: #fff;
+  padding: 20px;
+  text-align: center;
+}
+
+.card-header h3 {
+  text-align: center;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  color: black;
+ 
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-body p {
+  font-size: 16px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+.card-body ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px 0;
+}
+
+.card-body ul li {
+  font-size: 14px;
+  color: #444;
+  margin-bottom: 10px;
+  position: relative;
+  padding-left: 25px;
+}
+
+.card-body ul li::before {
+  content: "✔";
+  color: #bfa350;
+  font-size: 14px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.card-body .price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #bfa350;
+  margin-bottom: 20px;
+}
+
+.quote-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #bfa350;
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+  cursor: pointer;
+}
+
+.quote-btn:hover {
+  background: #d7c92d;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .program-card {
+    margin-bottom: 20px;
+  }
+}
 
 </style>
 </head>
 
 <body class="index-page">
 
-  <header id="header" class="header d-flex align-items-center ">
-    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-        <a href="index.html" class="logo d-flex align-items-center">
-            <!-- Uncomment the line below if you also wish to use an image logo -->
-            <img src="assets/img/hero-carousel/logo.png" alt=""> 
-        </a>
 
-        <nav id="navmenu" class="navmenu">
-            <ul>
-                <li><a href="index.html" class="active">Início</a></li>
-                <li><a href="about.html">Sobre</a></li>
-                <li><a href="services.html">Serviços</a></li>
-                <li><a href="contact.html">Contato</a></li>
-            </ul>
-            <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
-        </nav>
 
-    </div>
+    
+
+    
+    
+  
+
+
+
+
+
+
+
+
+
+
+
+<header id="header" class="header d-flex align-items-center">
+  <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+          <img src="assets/img/hero-carousel/logo.png" alt=""> 
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+          <ul>
+              
+              <li><a href="#quote" class="btn-quote">OBTER COTAÇÃO</a></li>
+              <li class="language-dropdown">
+                <a href="#" class="d-flex align-items-center">
+                  <img src="assets/img/hero-carousel/en_US.png" alt="Portuguese" class="flag-icon"> &nbsp;
+                  <img src="assets/img/hero-carousel/pt_BR.webp" alt="Portuguese" class="flag-icon"> 
+                </a>
+               
+              </li>
+          </ul>
+          <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+  </div>
 </header>
+
 
 <main class="main">
 
-    <section id="hero" class="hero section dark-background">
+  <section id="hero" class="hero section dark-background">
 
-        <div class="info d-flex align-items-center">
-            <div class="container">
-                <div class="row justify-content-center" data-aos="fade-up" data-aos-delay="100">
-                    <div class="col-lg-6 text-center">
-                        <h2>Encontre sua paz interior</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                        <a href="#get-started" class="btn-get-started">Comece Agora</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+      <!-- Video Background -->
+      <video autoplay loop muted playsinline class="hero-video">
+          <source src="assets/img/hero-carousel/hero_site.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+      </video>
 
-        <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+      <!-- Bottom-Left Text -->
+      <div class="hero-text">
+          <h1>Espaço Chakras,</h1>
+          <h2>UM LUGAR</h2>
+          <h3>DE {RE}PENSAR</h3>
+      </div>
 
-            <div class="carousel-item">
-                <img src="assets/img/hero-carousel/hero-carousel-1.jpeg" alt="">
-            </div>
-
-            <div class="carousel-item active">
-                <img src="assets/img/hero-carousel/hero-carousel-2.jpeg" alt="">
-            </div>
-
-            <div class="carousel-item">
-                <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="">
-            </div>
-
-            <div class="carousel-item">
-                <img src="assets/img/hero-carousel/hero-carousel-4.jpeg" alt="">
-            </div>
-
-            <div class="carousel-item">
-                <img src="assets/img/hero-carousel/hero-carousel-5.jpeg" alt="">
-            </div>
-
-            <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
-                <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
-            </a>
-
-            <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
-                <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
-            </a>
-
-        </div>
-
-    </section><!-- /Seção Hero -->
+  </section>
 </main>
 
-    
-
-    
-    
-  
-    
 
 
-
-
-    <section id="exclusive-experience" class="section">
-      <div class="container">
-        <div class="content-wrapper">
-          <!-- Left: Text Content -->
-          <div class="text-wrapper" data-aos="fade-right">
-            <h2>Experiência Exclusiva de Relaxamento e Conexão com a Natureza</h2>
-            <ul>
-              <li>
-                <p>
-                  Fique hospedado em uma casa aconchegante no litoral norte de São Paulo, cercada por belas praias, trilhas na Mata Atlântica e vistas paradisíacas. 
-                  Aulas de ioga e meditação guiadas para revitalizar o corpo e a mente. Alimentação saudável e deliciosa, com pratos preparados especialmente para o seu bem-estar.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Pacote Personalizado com Passeios e Atividades Únicas: Explore as praias mais encantadoras de Camburizinho e arredores com um guia bilíngue que conhece os segredos locais.
-                  Descubra a cultura e a história da região com visitas a centros históricos e passeios guiados. Trilhas ecológicas e roteiros para quem busca aventura ou tranquilidade, adaptados ao seu ritmo.
-                </p>
-              </li>
-              <li>
-                <p>
-                  Conveniência e Exclusividade em Cada Detalhe: Transporte confortável com guia e motorista particular para São Paulo e outros pontos turísticos, incluindo um tour de compras pela cidade. 
-                  Opções de pacotes de fim de semana ou semana completa para atender à sua disponibilidade. Atendimento acolhedor e personalizado para tornar sua estadia inesquecível.
-                </p>
-              </li>
-            </ul>
-          </div>
-          <!-- Right: Image -->
-          <div class="image-wrapper" data-aos="fade-left">
-            <img src="assets/img/hero-carousel/WhatsApp Image 2025-01-09 at 11.26.21 AM.jpeg" alt="Relaxing beach experience">
-          </div>
-        </div>
+<section id="rituaali-section" class="d-flex align-items-center section">
+  <div class="container">
+    <div class="row">
+      <!-- Left Side: Video -->
+      <div class="col-lg-6 col-md-12 video-container">
+        <video autoplay muted loop playsinline class="w-100">
+          <source src="assets/img/hero-carousel/hero_site.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
       </div>
-    </section>
-    
-
-
-    <section id="exclusive-experience" class="section">
-      <div class="container">
-        <div class="content-wrapper">
-          <!-- Left: Video -->
-          <div class="video-wrapper" data-aos="fade-right">
-            <video autoplay muted loop playsinline class="responsive-video">
-              <source src="assets/img/hero-carousel/WhatsApp Video 2025-01-09 at 11.21.30 AM.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-            </video>
-          </div>
-          <!-- Right: Text Content -->
-          <div class="text-wrapper" data-aos="fade-left">
-            <h2>Descubra o equilíbrio perfeito entre conforto e bem-estar a apenas 10 metros da Praia de Camburizinho</h2>
-            <p>
-              No Espaço Chakra, oferecemos mais do que hospedagem – proporcionamos uma experiência única de relaxamento e conexão.
-              Localizado a apenas 10 metros da paradisíaca Praia de Camburizinho, nosso refúgio combina acomodações confortáveis,
-              alimentação saudável e atividades integrativas, como yoga, massoterapia e meditação.
-            </p>
-            <p>
-              Hospedar-se conosco é mergulhar em um ambiente tranquilo, ideal para renovar corpo, mente e alma.
-              Nossos pacotes são cuidadosamente planejados para oferecer bem-estar completo, com passeios inesquecíveis por praias,
-              cachoeiras e centros históricos.
-            </p>
-            <p>
-              Escolha o Espaço Chakra para relaxar, se revitalizar e criar memórias transformadoras!
-            </p>
-          </div>
-        </div>
+      <!-- Right Side: Content -->
+      <div class="col-lg-6 col-md-12 content-container">
+        <h2>Descubra seu Rituaali.</h2>
+        <p>Somos o maior spa médico do Brasil. Especialistas em Medicina do Estilo de Vida e Medicina Comportamental.</p>
+        <p>Estamos localizado em Penedo, em meio a natureza exuberante da Mata Atlântica, a poucas horas de carro do RJ e de SP.</p>
+        <img src="assets/img/hero-carousel/Rituaali_LPInstitucional_LN_v02-e1685470750329-1024x305.webp" alt="Small Image" class="small-image">
+        <a href="#quote" class="btn2">PEDIR COTAÇÃO</a>
       </div>
-    </section>
-    
+    </div>
+  </div>
+</section>
 
-    <section id="services" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Nossos Serviços</h2>
-        <div class="services">
-          <!-- Service Card 1 -->
-          <div class="service-card" data-aos="zoom-in" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.32.04 AM.jpeg');">
-            <div class="overlay">
-              <h3>Aulas de Yoga</h3>
-              <p>Sessões diárias de yoga na praia, conduzidas por instrutores especializados, adequadas para todos os níveis.</p>
-            </div>
-          </div>
-          <!-- Service Card 2 -->
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="100" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.32.24 AM.jpeg');">
-            <div class="overlay">
-              <h3>Meditação</h3>
-              <p>Meditação guiada e práticas de mindfulness em nosso santuário tranquilo no jardim.</p>
-            </div>
-          </div>
-          <!-- Service Card 3 -->
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="200" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.33.25 AM.jpeg');">
-            <div class="overlay">
-              <h3>Tratamentos de Spa</h3>
-              <p>Massagens luxuosas e tratamentos com produtos naturais e orgânicos.</p>
-            </div>
-          </div>
-          <!-- Service Card 4 -->
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="300" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.23.47 AM.jpeg');">
-            <div class="overlay">
-              <h3>Caminhadas & Cachoeiras</h3>
-              <p>Explore a beleza deslumbrante das trilhas e cachoeiras próximas para uma experiência inesquecível.</p>
-            </div>
-          </div>
-          <!-- Service Card 5 -->
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="400" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.27.34 AM.jpeg');">
-            <div class="overlay">
-              <h3>Passeios de Barco</h3>
-              <p>Desfrute de passeios guiados de barco, mostrando a beleza serena da costa e seus segredos.</p>
-            </div>
-          </div>
-          <!-- Service Card 6 -->
-          <div class="service-card" data-aos="zoom-in" data-aos-delay="500" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.28.57 AM.jpeg');">
-            <div class="overlay">
-              <h3>Ilhas Paradisíacas</h3>
-              <p>Descubra ilhas isoladas que oferecem um pedaço do paraíso, perfeito para relaxamento e exploração.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    
-    
-  
+
+
+
+
+
+
+<section id="rituaali-promo" class="promo-section">
+  <div class="promo-container">
+    <div class="promo-content" data-aos="fade-left">
+      <h2>Por que você precisa passar pelo Rituaali?</h2>
+      <p>
+        Vamos supor que seu estilo de vida possa ser classificado em uma escala de 1 a 10, com base em quão bem elas sustentam sua saúde. 
+        A pontuação 1 representa os hábitos prejudiciais à sua saúde, enquanto a pontuação 10 representa um modo de vida ideal e saudável. 
+        O Rituaali promove uma mudança de 1 a 10, ressignificando as três áreas da sua saúde: corpo, mente e espírito.
+      </p>
+      <a href="#" class="btn-quote">PEDIR COTAÇÃO</a>
+    </div>
+  </div>
+</section>
 
    
     
-    <section id="packages" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Nossos Pacotes</h2>
-        <div class="packages">
-          <!-- Package 1 -->
-          <div class="package-card" data-aos="fade-up" style="background-image: url('assets/img/hero-carousel/hero-carousel-1.jpeg');">
-            <div class="package-overlay">
-              <div class="package-header">
-                <h3>Escapada de Fim de Semana</h3>
-                <div class="price">R$299</div>
-              </div>
-              <ul>
-                <li>2 noites de acomodação</li>
-                <li>2 aulas de yoga</li>
-                <li>1 tratamento de spa</li>
-                <li>Café da manhã incluído</li>
-              </ul>
-              <button class="btn" onclick="openModal('Escapada de Fim de Semana', 299)">Reservar Agora</button>
-            </div>
-          </div>
-          <!-- Package 2 -->
-          <div class="package-card" data-aos="fade-up" data-aos-delay="100" style="background-image: url('assets/img/hero-carousel/hero-carousel-4.jpeg');">
-            <div class="package-overlay">
-              <div class="package-header">
-                <h3>Semana de Bem-Estar</h3>
-                <div class="price">R$899</div>
-              </div>
-              <ul>
-                <li>7 noites de acomodação</li>
-                <li>Yoga e meditação diárias</li>
-                <li>3 tratamentos de spa</li>
-                <li>Todas as refeições incluídas</li>
-              </ul>
-              <button class="btn" onclick="openModal('Semana de Bem-Estar', 899)">Reservar Agora</button>
-            </div>
-          </div>
-          <!-- Package 3 -->
-          <div class="package-card" data-aos="fade-up" data-aos-delay="200" style="background-image: url('assets/img/hero-carousel/WhatsApp\ Image\ 2025-01-09\ at\ 11.26.15\ AM.jpeg');">
-            <div class="package-overlay">
-              <div class="package-header">
-                <h3>Passaporte Diário</h3>
-                <div class="price">R$99</div>
-              </div>
-              <ul>
-                <li>1 aula de yoga</li>
-                <li>1 sessão de meditação</li>
-                <li>Acesso ao spa</li>
-                <li>Almoço saudável</li>
-              </ul>
-              <button class="btn" onclick="openModal('Passaporte Diário', 99)">Reservar Agora</button>
-            </div>
+
+<section id="imagine-section" class="imagine-section">
+  <div class="container">
+
+   
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="card">
+          <img src="assets/img/hero-carousel/attractive-african-woman-enjoying-face-massage-spa-salon.jpg" alt="Nature" class="card-img">
+          <div class="card-body">
+            <p>Um lugar onde você pode experimentar todo o poder da natureza em acomodações deslumbrantes.</p>
           </div>
         </div>
       </div>
-    </section>
+
+      <!-- Card 2 -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="card">
+          <img src="assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.27.34 AM.jpeg" alt="Luxury" class="card-img">
+          <div class="card-body">
+            <p>Um lugar paradisíaco capaz de despertar sua paz interior em meio ao luxo e ao conforto.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="300">
+        <div class="card">
+          <img src="assets/img/hero-carousel/WhatsApp Image 2025-01-10 at 10.25.57 AM (1).jpeg" alt="Gastronomy" class="card-img">
+          <div class="card-body">
+            <p>Um lugar que te permita saborear a alta gastronomia vital através de pratos deliciosos preparados por um chef experiente.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="400">
+        <div class="card">
+          <img src="assets/img/hero-carousel/WhatsApp Image 2025-01-09 at 11.26.21 AM.jpeg" alt="Wellness" class="card-img">
+          <div class="card-body">
+            <p>
+              Um lugar que combina a expertise de uma clínica, sem ser uma clínica; o luxo e a elegância de um hotel, 
+              sem seguir os padrões tradicionais de hotelaria; a infraestrutura de um centro de estética e fitness, sem se limitar ao peso e à beleza exterior.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+ </section>
+</div>
+</section>
+
+
+
+<section id="features-section" class="features-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Explore o Rituaali</h2>
+      <p>Descubra tudo o que o Rituaali tem a oferecer.</p>
+    </div>
+    <div class="row">
+      <!-- Card 1 -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-09 at 11.26.21 AM.jpeg');">
+          <div class="content">
+            <div class="icon">
+              <i class="bi bi-tree"></i>
+            </div>
+            <h3>Estrutura</h3>
+            <p class="short-desc">Toda nossa estrutura é preparada para sua renovação.</p>
+          </div>
+          <div class="card-hover-content">
+            <p>
+              O Rituaali é cercado pela Mata Atlântica e possui mais de 155mil m² de diversidade de árvores e plantas.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-card" style="background-image: url('assets/img/hero-carousel/WhatsApp Image 2025-01-09 at 11.26.21 AM.jpeg');">
+          <div class="content">
+            <div class="icon">
+              <i class="bi bi-tree"></i>
+            </div>
+            <h3>Estrutura</h3>
+            <p class="short-desc">Toda nossa estrutura é preparada para sua renovação.</p>
+          </div>
+          <div class="card-hover-content">
+            <p>
+              O Rituaali é cercado pela Mata Atlântica e possui mais de 155mil m² de diversidade de árvores e plantas.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 2 -->
+      
+      <!-- Card 3 -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-card" style="background-image: url('assets/img/hero-carousel/hero-carousel-3.jpeg');">
+          <div class="content">
+            <div class="icon">
+              <i class="bi bi-heart-pulse"></i>
+            </div>
+            <h3>Bem-estar</h3>
+            <p class="short-desc">Experiência única para renovar sua energia.</p>
+          </div>
+          <div class="card-hover-content">
+            <p>
+              Desfrute de um ambiente projetado para seu bem-estar, com terapias e atividades que promovem relaxamento profundo.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 4 -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="400">
+        <div class="feature-card" style="background-image: url('assets/img/hero-carousel/hero-carousel-2.jpeg');">
+          <div class="content">
+            <div class="icon">
+              <i class="bi bi-droplet"></i>
+            </div>
+            <h3>Hidromassagem</h3>
+            <p class="short-desc">Estímulo e relaxamento completos.</p>
+          </div>
+          <div class="card-hover-content">
+            <p>
+              Relaxe na hidromassagem, que ajuda a estimular a circulação e promover a sensação de bem-estar.
+            </p>
+          </div>
+        </div>
+      </div>
+      <!-- Card 5 -->
+      <div class="col-lg-4 col-md-6 mb-4" data-aos="fade-up" data-aos-delay="500">
+        <div class="feature-card" style="background-image: url('assets/img/hero-carousel/hero-carousel-1.jpeg');">
+          <div class="content">
+            <div class="icon">
+              <i class="bi bi-person-lines-fill"></i>
+            </div>
+            <h3>Atendimento Exclusivo</h3>
+            <p class="short-desc">Cuidado personalizado para cada hóspede.</p>
+          </div>
+          <div class="card-hover-content">
+            <p>
+              Atendimento dedicado para atender às suas necessidades e proporcionar uma estadia inesquecível.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<section id="accommodation-section" class="accommodation-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Acomodações</h2>
+      <p>Toda nossa estrutura é preparada para sua renovação.</p>
+    </div>
+    <div class="row">
+      <!-- Card 1: Chalé -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="accommodation-card" style="background-image: url('assets/img/hero-carousel/1.jpeg');">
+          <div class="content">
+            <h3>Chalé</h3>
+            <ul>
+              <li>Sauna úmida para aliviar seu estresse e melhorar sua circulação sanguínea.</li>
+              <li>Hidromassagem para estimular a produção de endorfinas e gerar sensação de prazer.</li>
+              <li>Lareira que torna o ambiente aconchegante e perfeito para o relaxamento.</li>
+              <li>Copa para tornar sua estadia ainda mais confortável e acolhedora.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: Apartamento -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="accommodation-card" style="background-image: url('assets/img/hero-carousel/2.jpeg');">
+          <div class="content">
+            <h3>Apartamento</h3>
+            <ul>
+              <li>Privacidade para você aproveitar bastante os momentos de cuidado e relaxamento.</li>
+              <li>Ambiente confortável com um design que valoriza a exuberante natureza nativa.</li>
+              <li>Vista para o jardim que por si só proporcionam momentos terapêuticos.</li>
+              <li>Varanda com vista panorâmica que permite a contemplação e a conexão com a natureza.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
     
+<section id="program-section" class="program-section">
+  <div class="container">
+    <div class="section-title" data-aos="fade-up">
+      <h2>Programas</h2>
+    </div>
+    <div class="row">
+      <!-- Card 1: +Saúde -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="100">
+        <div class="program-card">
+          <div class="card-header">
+            <h3>+Saúde</h3>
+          </div>
+          <div class="card-body">
+            <p>Nosso programa principal. Perfeito para você que deseja fazer um detox, dar um reset no organismo e melhorar sua saúde como um todo!</p>
+            <ul>
+              <li>Admissão clínica</li>
+              <li>Admissão comportamental</li>
+              <li>Consulta clínica</li>
+              <li>Consulta psicoterapêutica*</li>
+              <li>Consulta nutricional</li>
+              <li>2+ massagens</li>
+              <li>4+ tratamentos terapêuticos</li>
+              <li>Possibilidade de contratar protocolos adicionais</li>
+              <li>Mínimo 7 noites</li>
+            </ul>
+            <p class="price">| A partir de R$15.518 por hóspede</p>
+            <button class="quote-btn">PEDIR COTAÇÃO</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2: +Bem-estar -->
+      <div class="col-lg-6 col-md-12" data-aos="fade-up" data-aos-delay="200">
+        <div class="program-card">
+          <div class="card-header">
+            <h3>+Bem-estar</h3>
+          </div>
+          <div class="card-body">
+            <p>Representa a pausa perfeita para renovar as suas energias, desestressar e experimentar um relaxamento profundo!</p>
+            <ul>
+              <li>Atendimento comportamental</li>
+              <li>Consulta nutricional avaliativa</li>
+              <li>1 massagem</li>
+              <li>2 tratamentos terapêuticos</li>
+              <li>4 a 6 noites</li>
+            </ul>
+            <p class="price">| A partir de R$9.081 por hóspede</p>
+            <button class="quote-btn">PEDIR COTAÇÃO</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+   
     
 
-    <section id="activities" class="section">
-      <div class="container">
-        <h2 class="section-title" data-aos="fade-down">Atividades na Praia</h2>
-        <div class="activities">
-          <!-- Activity 1 -->
-          <div class="activity-card" data-aos="fade-up">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Yoga na Praia">
-            </div>
-            <div class="activity-content">
-              <h3>Yoga na Praia</h3>
-              <span class="para">
-                <p>Comece o seu dia com yoga ao nascer do sol na praia</p>
-              </span>
-            </div>
-          </div>
-          <!-- Activity 2 -->
-          <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Natação">
-            </div>
-            <div class="activity-content">
-              <h3>Natação</h3>
-              <span class="para">
-                <p class="para">Dê um mergulho refrescante em nossas águas cristalinas</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="activities">
-          <!-- Activity 1 -->
-          <div class="activity-card" data-aos="fade-up">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Yoga na Praia">
-            </div>
-            <div class="activity-content">
-              <h3>Yoga na Praia</h3>
-              <span class="para">
-                <p>Comece o seu dia com yoga ao nascer do sol na praia</p>
-              </span>
-            </div>
-          </div>
-          <!-- Activity 2 -->
-          <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Natação">
-            </div>
-            <div class="activity-content">
-              <h3>Natação</h3>
-              <span class="para">
-                <p class="para">Dê um mergulho refrescante em nossas águas cristalinas</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <br>
-      <div class="container">
-        <div class="activities">
-          <!-- Activity 1 -->
-          <div class="activity-card" data-aos="fade-up">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Yoga na Praia">
-            </div>
-            <div class="activity-content">
-              <h3>Yoga na Praia</h3>
-              <span class="para">
-                <p>Comece o seu dia com yoga ao nascer do sol na praia</p>
-              </span>
-            </div>
-          </div>
-          <!-- Activity 2 -->
-          <div class="activity-card" data-aos="fade-up" data-aos-delay="100">
-            <div class="activity-image">
-              <img src="assets/img/hero-carousel/hero-carousel-3.jpeg" alt="Natação">
-            </div>
-            <div class="activity-content">
-              <h3>Natação</h3>
-              <span class="para">
-                <p class="para">Dê um mergulho refrescante em nossas águas cristalinas</p>
-              </span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+
+
     
+
     
 
 
