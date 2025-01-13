@@ -968,7 +968,7 @@ ul li {
     z-index: 2; /* Ensure text is above the video */
     color: white;
     text-align: left;
-    margin-bottom: 2rem; /* Adjust bottom spacing */    
+    margin-bottom: 10px; /* Adjust bottom spacing */    
     margin-right: 1000px;
 }
 
@@ -997,7 +997,7 @@ ul li {
 @media (max-width: 768px) {
     .hero-text {
         text-align: center; /* Center align for smaller devices */
-        margin-bottom: 4rem; /* Increase spacing */
+        /* Increase spacing */
     }
 
     .hero-text h1 {
@@ -1659,6 +1659,38 @@ video {
   }
 }
 
+
+
+
+.whatsapp-button {
+  position: fixed;
+  bottom: 20px; /* Distance from the bottom */
+  right: 20px; /* Distance from the right */
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  text-decoration: none;
+  font-size: 1.5rem;
+  padding: 15px;
+  border-radius: 50%; /* Circular button */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.whatsapp-button:hover {
+  background-color: #1ebe57; /* Slightly darker green */
+  transform: scale(1.1); /* Slight zoom effect */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.whatsapp-button i {
+  font-size: 2rem;
+}
+
+
 </style>
 </head>
 
@@ -1681,6 +1713,15 @@ video {
 
 
 
+
+  <a
+  href="https://wa.me/1234567890?text=Hi%20there!%20I%20would%20like%20to%20know%20more%20about%20your%20services."
+  target="_blank"
+  class="whatsapp-button"
+  title="Chat with us on WhatsApp"
+>
+  <i class="bi bi-whatsapp"></i>
+</a>
 
 
 <header id="header" class="header d-flex align-items-center">
@@ -2380,7 +2421,7 @@ video {
 
 
   <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"></a>
 
   <!-- Preloader -->
   <div id="preloader"></div>
